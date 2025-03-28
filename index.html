@@ -1,44 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>URL Copy Test</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 600px;
-            margin: 20px auto;
-            text-align: center;
-        }
-        #urlText {
-            margin: 20px 0;
-            word-break: break-all;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-    </style>
+    <title>Parent Page</title>
 </head>
 <body>
-    <h1>URL Copy Test</h1>
-    <div id="urlText">https://www.google.com/</div>
-    <button onclick="copyUrl()">Copy URL</button>
-
-    <script>
-        function copyUrl() {
-            const urlText = document.getElementById('urlText').textContent;
-            navigator.clipboard.writeText(urlText)
-                .then(() => {
-                    alert('URL copied to clipboard!');
-                })
-                .catch(err => {
-                    console.error('Failed to copy: ', err);
-                    alert('Failed to copy URL');
-                });
-        }
-    </script>
+    <h1>test page</h1>
+    <input id="myInput" value="Test value">
+    <!-- Iframe without allow="clipboard-write" -->
+    <iframe id="myIframe" src="iframe.html"></iframe>
 </body>
 </html>
