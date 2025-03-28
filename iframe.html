@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>iframe test page</title>
+</head>
+<body>
+    <h2>Iframe Content</h2>
+    <button onclick="copyToClipboard()">Copy to Clipboard</button>
+    <script>
+        async function copyToClipboard() {
+            try {
+                const value = "Trying to copy this!";
+                await navigator.clipboard.writeText(value);
+                alert("Copied: " + value);
+            } catch (err) {
+                console.error("Clipboard error:", err);
+                alert("Failed: " + err.message);
+            }
+        }
+    </script>
+</body>
+</html>
