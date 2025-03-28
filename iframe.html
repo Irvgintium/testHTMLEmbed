@@ -9,8 +9,8 @@
     <script>
         async function copyToClipboard() {
             try {
-                const value = "https://www.google.com/";
-                await navigator.clipboard.writeText(value);
+                const parentValue = window.parent.document.getElementById("myInput").value;
+                await navigator.clipboard.writeText(parentValue);
                 alert("Copied: " + value);
             } catch (err) {
                 console.error("Clipboard error:", err);
