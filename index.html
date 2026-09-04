@@ -2,10 +2,19 @@
 <html>
 <head>
     <title>Parent Page</title>
+    <script 
+src="https://cdn.prod.us.five9.net/static/stable/chat/wrapper/index.js">
+</script>
 </head>
 <body>
-    <h1>test page</h1>
-    <input id="myInput" value="https://www.google.com/">
-    <iframe id="myIframe" src="https://irvgintium.github.io/testHTMLEmbed/iframe.html"></iframe>
+    <h1>Irv's Dummy page</h1>
+    <script>
+  F9.Chat.Wrapper.init({
+    cdn: 'prod',
+    integrationId: 'c3559fc0-1266-4c3c-a05c-40cada340443',
+    chatDeploymentId : '722f1532-9247-43a7-a60f-a58620486ce3'
+  });
+</script>
+
 </body>
 </html>
